@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+        <title>Prashant's Blog</title>
+        <description>Prashant's Blog - Prashant Anantharaman</description>
+        <link>http://username.github.io</link>
+        <atom:link href="http://username.github.io/rss.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sat, 15 Apr 2017 23:27:21 -0400</lastBuildDate>
+        <pubDate>Sat, 15 Apr 2017 23:27:21 -0400</pubDate>
+        <ttl>60</ttl>
+
+
+        <item>
+                <title>Setting up ANT+ on Ubuntu 14.04</title>
+                <description>&lt;p&gt;So I am setting up ANT+ SDK for one of my experiments.&lt;/p&gt;
+
+&lt;p&gt;Get the SDK zip for Linux. The one I am using is &lt;code&gt;ANT-SDK_Linux_3.8.200_(BETA).zip &lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You will have to install - build-essential, gobject-introspection, libgirepository1.0-dev , gperf, libudev1, libudev-dev&lt;/p&gt;
+
+&lt;p&gt;cd to DEMO_LIB and make.&lt;/p&gt;
+
+&lt;p&gt;Run the demo file then.&lt;/p&gt;
+
+</description>
+                <link>http://username.github.io/2016/07/14/setting-up-ant-on-ubuntu-14-04</link>
+                <guid>http://username.github.io/2016/07/14/setting-up-ant-on-ubuntu-14-04</guid>
+                <pubDate>Thu, 14 Jul 2016 14:20:15 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Sankalan : An attempt at making calls to dtrace and mdb interchangeably.</title>
+                <description>&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The point of this project to allow a set of methods to make dtrace and mdb calls from within a ruby program&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Motivation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There were cases in our midterm, wherein we had to catch a certain syscall on dtrace, then inspect the code using mdb.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Implementation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I implemented a module called Sankalan, with separate classes for Processes, generic methods and a class for File.&lt;/p&gt;
+
+&lt;p&gt;We make calls to mdb using the shell calls, and similarly calls to dtrace through the shell calls.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Code :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I hosted the code at https://github.com/prashantbarca/sankalan&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future Directions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Supporting more methods&lt;/li&gt;
+  &lt;li&gt;Testing&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                <link>http://username.github.io/2016/03/16/sankalan-an-attempt-at-making-calls-to-dtrace-and-mdb-interchangeably</link>
+                <guid>http://username.github.io/2016/03/16/sankalan-an-attempt-at-making-calls-to-dtrace-and-mdb-interchangeably</guid>
+                <pubDate>Tue, 15 Mar 2016 20:25:39 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Installing Ruby using Rbenv on OpenIndiana Illumos 11 (Hipster)</title>
+                <description>&lt;p&gt;If you have been trying to uninstall the preinstalled version of ruby, you would have seen that dtrace has a dependency of ruby, and wouldn’t let you uninstall ruby.&lt;/p&gt;
+
+&lt;p&gt;In order to solve this, I try to install ruby using rbenv, using the usual commands.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+ echo 'export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.bashrc 	
+ source ~/.bashrc
+ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+ rbenv install 2.3.0 (Or the version you want)
+ rbenv rehash
+ echo 'export PATH=&quot;$HOME/.rbenv/versions/2.3.0/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Following this, we need to remove the presently version of ruby. I just directly removed it, without thinking about the repercussions.
+If you want to do the same, just run the following command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo rm -rf /usr/ruby 
+$ rbenv rehash
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <link>http://username.github.io/ruby/tech/2016/03/07/installing-ruby-using-rbenv-on-openindiana-illumos-11-hipster</link>
+                <guid>http://username.github.io/ruby/tech/2016/03/07/installing-ruby-using-rbenv-on-openindiana-illumos-11-hipster</guid>
+                <pubDate>Mon, 07 Mar 2016 16:17:40 -0500</pubDate>
+        </item>
+
+        <item>
+                <title>Direction keys on vim on OpenIndiana</title>
+                <description>&lt;p&gt;The direction keys on the default vim spit out A B C D on pressing the 4 direction keys while on the ‘insert’ mode. Although, at first glance, one might say, this is vi, not vim. That’s what even I thought.&lt;/p&gt;
+
+&lt;p&gt;The fix to this problem was simply adding a ~/.vimrc and adding the line “set nocompatible” to it.&lt;/p&gt;
+
+</description>
+                <link>http://username.github.io/tech/2016/03/07/direction-keys-on-vim-on-openindiana</link>
+                <guid>http://username.github.io/tech/2016/03/07/direction-keys-on-vim-on-openindiana</guid>
+                <pubDate>Mon, 07 Mar 2016 15:28:49 -0500</pubDate>
+        </item>
+
+        <item>
+                <title>Installing essentials for OpenIndiana</title>
+                <description>&lt;p&gt;We have been using OpenIndiana Illumos for our Advanced OS course. I faced a bit of difficulty installing essentials on it, hence this blog post to keep track of what I did to fix it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo pkg uninstall entire
+
+$ sudo pkg update -v
+
+$ pkg set-publisher -O http://pkg.openindiana.org/hipster-2015 --search-first openindiana.org
+
+$ sudo pkg install build-essential
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Helped me, hope it helps someone!&lt;/p&gt;
+</description>
+                <link>http://username.github.io/2016/02/19/installing-essentials-for-openindiana</link>
+                <guid>http://username.github.io/2016/02/19/installing-essentials-for-openindiana</guid>
+                <pubDate>Fri, 19 Feb 2016 14:08:17 -0500</pubDate>
+        </item>
+
+        <item>
+                <title>Fun with sudo</title>
+                <description>&lt;p&gt;&lt;strong&gt;Insulting wrong passwords&lt;/strong&gt;
+I added ‘Defaults insults’ to the /etc/sudoers file.&lt;/p&gt;
+
+&lt;p&gt;Every time a sudoer enters the wrong password - Very interesting results&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Your mind just hasn’t been the same since the electro-shock, has it?&lt;/li&gt;
+  &lt;li&gt;Listen, burrito brains, I don’t have time to listen to this trash.&lt;/li&gt;
+  &lt;li&gt;That’s something I cannot allow to happen.&lt;/li&gt;
+  &lt;li&gt;You silly, twisted boy you.&lt;/li&gt;
+  &lt;li&gt;I don’t wish to know that.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                <link>http://username.github.io/2016/02/17/fun-with-sudo</link>
+                <guid>http://username.github.io/2016/02/17/fun-with-sudo</guid>
+                <pubDate>Wed, 17 Feb 2016 17:00:58 -0500</pubDate>
+        </item>
+
+        <item>
+                <title>Ruby on Rails Installation Instructions for Ubuntu</title>
+                <description>&lt;p&gt;Here are some instructions to install Ruby on Rails using rbenv.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;data:image/jpeg;base64,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&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Update the sources&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, let us install the pre-requisites&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we come to the Rbenv instructions, copy paste the following instructions on your shell.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/sstephenson/rbenv.git ~/.rbenv&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo 'export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo 'eval &quot;$(rbenv init -)&quot;' &amp;gt;&amp;gt; ~/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Note: Zsh users please use &lt;code&gt;~/.zshrc&lt;/code&gt; in place of &lt;code&gt;~/.bashrc&lt;/code&gt;.``&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo 'export PATH=&quot;$HOME/.rbenv/plugins/ruby-build/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;exec $SHELL&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rbenv install 2.2.2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rbenv global 2.2.2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo &quot;gem: --no-ri --no-rdoc&quot; &amp;gt; ~/.gemrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gem install bundler&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gem install rails&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gem install therubyracer&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rbenv rehash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Check if its installed correctly&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rails -v&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading! Hope this helped!&lt;/p&gt;
+</description>
+                <link>http://username.github.io/tech/2015/07/08/ruby-on-rails-installation-instructions-for-ubuntu</link>
+                <guid>http://username.github.io/tech/2015/07/08/ruby-on-rails-installation-instructions-for-ubuntu</guid>
+                <pubDate>Wed, 08 Jul 2015 12:58:58 -0400</pubDate>
+        </item>
+
+        <item>
+                <title>Hello World</title>
+                <description>&lt;p&gt;This isn’t my first blog post. I used to blog earlier at &lt;a href=&quot;http://prashantbarca.wordpress.com&quot;&gt;http://prashantbarca.wordpress.com&lt;/a&gt; (not like I wrote much there either). Since I have a lot of time off these days, I have decided I will put down whatever I feel like penning down.&lt;/p&gt;
+
+&lt;p&gt;4 years in College of Engineering, Guindy flew past. Although I finished all courses, and got my provisional degree, there was some feeling of something seriously missing. Yet to figure out what.&lt;/p&gt;
+</description>
+                <link>http://username.github.io/2015/07/02/hello-world-2</link>
+                <guid>http://username.github.io/2015/07/02/hello-world-2</guid>
+                <pubDate>Thu, 02 Jul 2015 15:58:30 -0400</pubDate>
+        </item>
+
+
+</channel>
+</rss>

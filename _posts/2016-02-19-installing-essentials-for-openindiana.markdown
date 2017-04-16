@@ -13,12 +13,12 @@ We have been using OpenIndiana Illumos for our Advanced OS course. I faced a bit
 
 
 
-$ sudo pkg uninstall entire
+	$ sudo pkg uninstall entire
 
-$ sudo pkg update -v
+	$ sudo pkg update -v
 
-$ pkg set-publisher -O http://pkg.openindiana.org/hipster-2015 --search-first openindiana.org
+	$ pkg set-publisher -O http://pkg.openindiana.org/hipster-2015 --search-first openindiana.org
 
-$ sudo pkg install build-essential
+	$ sudo pkg install build-essential
 
 Helped me, hope it helps someone!

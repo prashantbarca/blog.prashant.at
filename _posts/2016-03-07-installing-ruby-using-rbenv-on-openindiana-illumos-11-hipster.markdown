@@ -16,28 +16,15 @@ If you have been trying to uninstall the preinstalled version of ruby, you would
 
 In order to solve this, I try to install ruby using rbenv, using the usual commands.
 
-
-<blockquote>
-
->     
->     git clone https://github.com/rbenv/rbenv.git <span class="pl-k">~</span>/.rbenv
->     <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>export PATH="$HOME/.rbenv/bin:$PATH"<span class="pl-pds">'</span></span> <span class="pl-k">>></span> <span class="pl-k">~</span>/.bashrc
->     source ~/.bashrc
->     <code>git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build</code>
->     rbenv install 2.3.0 (Or the version you want)
->     rbenv rehash
->     <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>export PATH="$HOME/.rbenv/versions/2.3.0/bin:$PATH"<span class="pl-pds">'</span></span> <span class="pl-k">>></span> <span class="pl-k">~</span>/.bashrc
-> 
-> 
-
-
-> 
-> * * *
-> 
-> 
-
-</blockquote>
-
+     git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc 	
+     source ~/.bashrc
+     git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+     rbenv install 2.3.0 (Or the version you want)
+     rbenv rehash
+     echo 'export PATH="$HOME/.rbenv/versions/2.3.0/bin:$PATH"' >> ~/.bashrc
+ 
+ 
 
 Following this, we need to remove the presently version of ruby. I just directly removed it, without thinking about the repercussions.
 If you want to do the same, just run the following command. 

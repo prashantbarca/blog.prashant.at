@@ -1,0 +1,244 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Ruby on Rails Installation Instructions for Ubuntu</title>
+    
+    <meta name="author" content="Prashant Anantharaman">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap styles -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Sticky Footer -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link href="/assets/themes/bootstrap-3/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Prashant's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about">About</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+
+
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="container">
+        
+
+<div class="page-header">
+  <h1>Ruby on Rails Installation Instructions for Ubuntu </h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-xs-12">
+    <div class="date">
+      <span>08 July 2015</span>
+    </div>
+    <div class="content">
+      <p>Here are some instructions to install Ruby on Rails using rbenv.</p>
+
+<p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQTEBQUEhQWFRQXFBcVFRgVFRgUFBUXGBQXGBcUFxQYHCggGBwlHRQUITEhJSkrLy4uGB8zODQsNygtLiwBCgoKDg0OGxAQGiwkICQsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLP/AABEIAMwAzAMBEQACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAgMEBQYHAQj/xABKEAABAwICBgUICAIHCAMAAAABAAIDBBEFIQYSMUFRYQcicYGREzJCUqGxwdEUI2JyksLh8BaCCCRDg5Oi0iUzU2Nzo7KzFURU/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAQBAgMFBv/EADQRAAICAQMDAQUHBAIDAAAAAAABAgMRBCExBRJBURMiMmGBFEJxkaHR8BUjscEGUjPh8f/aAAwDAQACEQMRAD8A3FAAQAEABAAQAEABAAQAEABAAQBG4xj9NSi9RNHHwDnDWPY3aVDklyaQqnP4VkomM9LsYyo4HzH15Pqo+0Dzndlh2paerhE6+m6Fqbd2sL+fzyUzEdO8Rmdfy/km+rCA0ficCSlZa1vg7VX/AByMV725NYVjL5wAMQrI5N7HPiOf2XeTGstY6ju4YnqOkuneUE16o5Xy1Q/+9VZfbYPcwIldL1KV6Sl/dRBVmMVjNlbU98n6LF6iaHIdO08vukdLpFWkWNZUd0pHtCj7TYzVdM0y+6Nzj1Z/+yp/x3/NHt5+pP8ATtP/ANV+SOHHqzfWVP8AjyfNT7efqW/plHmK/JBWaRVjTcVlTfnO9w8HEhSr5+pnLp2nx8KJ7CulOvhI13MnbvEjbO/E2y3jqJeTnXdJqfw7Gm6I9JVLWkRu+omOQZIQWuPBkmQd2EA8kzC2Mjj6jQ2U78ouq0EgIACAAgAIACAAgAIACAAgAIACAILSbSymoW3nf1yLtjb1pX8LN4czYKkpqK3N6NNZfLEEZVpB0j1lTdsP9ViOQ1TrTEc37G9wy470hbrfET1Wi/44tpXP6FP1BrFxu5xNy5xLnE8STndJSsnLlnoq6NPp17qX+zpkVe0mWq9EFMhU9qMvtMzrZeKjt9DWvU5eJE1Q4o89Rx1huvtHfvWsLG9mJazSQj78NhDExvRIXqIjVuqZHI1ykFLVOTX2aiJvVkZSEXq6F5CLldC8hF4V0LzNe6J+kJznto6t2sTlBK45k7onk7eR7k3VZnZnC12jS/uQ+q/2bAmDkgQAEABAAQAEABAAQAEAFlkDWlziGtAJJJsABtJJ2BBKWdkZVpj0oEl0OH23h1QRcD/pNO0/aOSUu1ShsjvdP6LO73rNkZq8kvc97i97jdz3HWc48yVzJ2Sm9z2FGnq08cQRwuVMEzub4CKxg2cQVOKQOIAkMNvrsvxsoSxIbm+/TP8AD/BcKWhDsnAEbwdmSaUcnnZ2NbokqbDaGfqvgayT7BLA7ssdvJbRhVPZrcXt1euo96E24/PfAxr9CabPVdI3+YOHtF/apelh4CHXNR95J/oQFXofbzZgfvMt7is3pscMaj1hS+KH5MianRuVuwtd3296j2EkW/qVMucoi58NlbtYe6x9yOyS8E/aKpcSGMrCNoI7QQpwUbT4ENcggg2INwRkQRsIKsjGR6i0Dx36ZQQzHz9XVk++3Jx77X709CWVk81qavZ2OJYFYwAgAIACAAgAIACAGWM4tFSwumneGMaMydpO5rRvJ4BQ2kssvXXKyXbFbmGaZaZzYg4tzipQerGPOktsdKd/3dgXNv1Te0T13TejxrSnbyVwZbEjyeg7lFYRwlSYyk2cQVApIClSQcKAJzRTD2yy9ZbVRyxLWWuEdi/4hoyxgjtbaDkmJ0pNHO02vm4SX4ghp9Vj3cBYISwmZynmSRXq0rGQ9WKUekHoSnPYHceTufNa13+JCmo6f9+r8v2IvSqnle3Xhkc1w2tBNnDkOK3l8hWnC2kiivxWcf2r+8rNSYxKqPOBN2JynbI5TlleyPoEdXSHa8oySoITLydqqaJG1f0fqsmGri3MkjeP7xrgf/UExQ9mcrqccSi/5t/9NZW5ywIACAAgAIACAIvSPHoaKB007rAZNaPOe7cxo3kqspKKyzWmmVsu2Jgmk+kU1fN5SbqsafqogerGOJ4uPFcu/UObwuD2XTumw08e6XJFpU6+TiCjYLIKthgxTgpkLI2ykE8iZQSFKkge4XiDoXgtVoy7dzOylW+6X3AMZfUSW3Mb7TkPitq7HNieu0kNNWvVv/BYsQj1afmbe039wTEliJx6n3WlOrt6WkdWsr1asZD9YSjxQt6rs27jvHLsWlVzjs+DDVaJWe/Dn/JG49Qh15GbdpA38xzTOz3RzUmsxkV1SVDAKCyQcBVNEjXf6PrevWncGwDxMvyKZ0/k5XVfur8TZUwccCAAgAIACAGGOYvFSwPmndqsaO8nc1o3k8FDaSyy9dcrJKMeTz5pLj8tfUeWl6oGUUd+rG34uO8rlX3ubwuD2fT9DHTwy+SP1UqdVBUAzrBcqUUk8IdCJWwZOQYRKcFHIZVDusfBQzWPARrboJbCOQApA3O6rJ+BjTxy+41XQLCdSna4jrSHX/l9H2Z96e08MR/E8/1jVd9zS4jt9fJM6S5MA5+4fqtbeDmaTeTZSK7elZHYrK9WLFnQgRTlQYOtlIy3LSE3Ewu08bPxIquhAdcb/wB3Takmso48q5Vy7ZDYBQSkHAUGiRsP9H2PKtdxMA5ZCU/mTWn4Zxercx+v+jXkwcgCAAgAIASqahsbHPkcGsa0uc5xsGgC5JKCUm3hGAaZ6TuxGo1hcU8ZIhYcr8ZXDid3Ad65uou7nhHrem6FUx7pcsiGQpM66fk7MyzUNFk8saqpYc0MdyTwV4oyseEPhEr4F3ILUnVYT4dql7ImO7wQzRc2G0rMZbwOpGBrVfGDJPLGW0qpqll4RPaLYQaioZHbqjrSHg0bfE2HeiqHfM01d601DkueF+P83NvooANgyAsF1Yo8PdNvkgtKTm0ciVlcN6LhspdfvSsjr1cldrFjI6ECMcqDAmVICMzL5FXi2he6tS2YxfFZbqWRCVTgwAIBI2noBj/qlS/jOG/hjB/OnaFsed6nLNi/D/Zqa3OYBAAQAEAYz0uaW+WkNFC76phBncPTfuivwG08+zNPU3Y91HoOkaHuftZ/QpOHR3B7Vz0ejkSDYlOCrkNsRFmjmVWRat5ZHqpqS2FQ9S/E+7L5rWC2FLpe9gfiJXwYORE43L1gwbsz2nZ++apP0GaFt3HaGksNZ207OQUxiVssy8IY1s2s6w2D2qrZrCOEEhZ47lnJ52G6o43ZsWg+B/RqcF4+tks5/wBkeizuHtK6NFfZH5nmOpav29uI/CuP3LlBHZg55ppLY4lksyI7EKFj83NuqSinybVWyjwys4rgsVthGe5x+KwnXE6Wn1NmeSrV2CM3F3iPkl5Vo6lepl8iDnwcDY494WXYOR1DfgYy0Nt4UdpqrcjOaK28KUitkkNHuG8jxV0mZSlDy0NpHAA2IWiTYpZKEU8M3ToHhthrz61Q4+DGN/Kn6fhPMdRebF+BpC1EAIACAKn0kaU/QaQ6hHl5bshG8G3WktwaD4kLO2fZHI5otM77EvHk8/Rt5kkm5JzJJ2klciUsvLPb11qKUUTeDsyd2hRDcL3jBJiJXwLORE40bPaODb+J/RUmb0cNkcVQ2LXR0+qxo5BMpbHMsnmTYs9oaCTkACT2BWKJ5eEQVBSGV5leOre4HH9As4xy8jdlihHsQMZq7dRu30uQ4Ik/BFMM+8yIjbfsWTY7COS9dHmjvlXiokH1bD1AfTeN/Y339i309WX3M5/VNZ2R9lHl8/Jf+/8ABbtLdKI6NlsnTEdRn5nW2D3pqyxRRx9LpJXv0XllHb0sVbjqnyLCMsozbuLnFYzvtSyuDoafpuglLsn3KXzez/QRn09rnf2oHZGwfBY/abH5OkujaOPEf1ZG1Gk9W/zpnd1h7gods35NI6DTw4gMJsUmdtlce9R3Nl/YVriI1fUPO1zvxFGSHFegi5x4nxUlWhvOFeIrfwhs5aoRkJuVkYyPRfQvHbCIjxfKf85HwTdXwnD1/wD5n9P8F6WgmBAHCUAecNO9Ifp1c+UG8TPqoeGoDm8feNz2WXN1FndLB7Dpel9jVl8sh4W5XScmdmKwsk9o+y4f2j3FXrFdU8NEw2Ja4EnIrONO+udysPYsZ8nQo+BDehi15WN4uHhv9l1EVllrJdsGy7iJN4OP3CdbRF7NXY0nrHeQMyB25Icckws7XnyRuMVjYWarbaxFmjgOJVJNRN6a3Y8vgqmbjc95WDZ0kiwaKaPuq5g3MRNzkdwHqj7R/VWqrc2Y6vVR08M+fCNB0m0hjoYRFCG+UDQGM9Fg3Od8t6cssVawjh6bTT1M++fHl+pkdbVPlkdJI4ue43cTtKSbbeWegjCMIqMVhIha5ln9qZqfunL1ccWZ9RSmrXNyOY9oVZ1J7o30+unX7st1+pIskBFwlmmnudiFkZrMThUkMIVJmwhUlGIzrSArqOENXLVCEgs4sbcNvari+cnpjoth1cJpebC7xcU3X8KOFrHm6Ra1cWAgCm9K+OfRsOeGm0kx8izj1gdc9zQfFZ2y7Yjugo9rcl6GAws2DcuTJ+T28I+EPFibMsGizbiTtb8VvVwc/WvDRPiJbYEXIodbJrSPPFx96VlydmtYikSeilPrTk7mtJ7zkPitKluLayfbXj1L7h+HGQ8GjafgOabjHJxbLlBfMjdKcTZBstcDVjbxttJ5X3qtklE20lMrP9szueV0ji5xuTtPwSjedzuRiorCJPR/BZKqURxjLa9x81jeJ58AiFbm8Gd+ohRDul9F6mj11ZFh9OIKcXfbac7E7XvO88uzcnJSVce2JxIQnqrPaWcfzZGX4nVGR7iSXEm7icySkpPLO7XBRjhDEoNGMq9mQPctqn4EtXHKTG0bc1q2KVxyxyzLYsnuPwzF5Q8jJIWbj6Dcbs7SOOUF2EKkoxCoWkBXUcILTM2uPmtF+/cFtFHMtlhYGTnXNzvVjNHqjQOHUwykb/yGHxF/inIfCjz+pebZP5k8rGAEAYJ0w439IrxE03ZTNLP7x1jJ7mDuSOpnl4PT9G0/bB2PyU+lGRKQm/B6CAsqFiz6GNuJe1nucmaeGc3XvDj9SwVfUje71WOd4NJWz2QhD3pJerM1SR3zQOjfBHPifI4ENc+wO9waBs5XO3kndPXlZOH1TUqMlBc4LdpJibKOmc4AXAsxvFxyF0xOShE5mmplqLUvzZilZVPleXyG7j7OQ4Bc2Um3lnq4QjCPbHgkNHsDlq5QyMdUee8+awcTxPAKYVubM9RqIUxzL6L1NQZDHRQeRpx1vSccyT6zjvPLcnNoLETguUtRPvsKBpHWWJaDdxzcd4/UpSyXg7Olrys+CtlZDoQqxDEKht2lXg8Mxuj3QaGsTVrJi1MNsiwCoMpC8D9UqMl+3JJsp2yC4yPH5hThMhSlDYZVVK5h6wy3HcVXGDVSUuBlM0kgDMnYrwFdU8JB8WAja2IbfOf27h++SZxhYOP3d8u4iwoLLk9cYBFq0lO31YIm+EbQnVwebseZv8WP1JQi9J8YFJSSzuz1GHVHrPOTG97iAqyeFk0prdk1FHnbSjCX00zWykukfG2V5O0vfcv9t1zbFiR7PRTUqtvGw0gHVCVlydGPAdQBbNAxfyw+5+ZM0eTl9R27fqTukEDjTSNY0uc4BoDRcm5A+a2mn27CWmlFWpyeEtxpo5oARaSrGe0RA3H85G3sCivT43kaarqv3afz/Yv7pRFG1jALgbBsb++CazhYRxMOcm2ZZ0j4kXStivew139p80dwz7wk75eD0PTKkouf0Qw0V0Tlq3BxuyEHrPI28mDeeewLOupyGNVrIUrHMvT9zVqWjjpohFA0NaPEneSd55p1JRWEcCdkrZ903krmkFWImE7XHzRz4rCyWEO6atzfyM4rHEuJOZJuUk+TvQWFhDUoLBCrEMIQpIxnYb6q0yZKONg4Cg0SDgKpokLU8pYbj9CjOC3YmsMslDK2VmYy2EHYrp5FpxcGCuwFtND9MceoSWMafWttB8R4reuGF3HK1uoc5+yXPkoM0pe4udmSblWZiljYDGXNhtOSgukewmNsABsAsO5PnlgyAKD0nTny+HxE/VulklcPWMLWal+QMl7diwveEjpdOgn3Pzt+pR+lNmuKeYcHRuPg5v50rbvhne6f7rlH6lMgd1UnJbnWi9iX0dxCOGb69gkgeNSVpF+qfSHMHMWV6pKL97gX1VU7If23iS3T/nqa1otgGH2dJSu1mvtf60kC17Cx6zduw5ro1118xPM6zVavKjasNfIlsSraemYLlrbnINGs53h8VeUoxQrVXbc9iGfXSVBDYwWNJAv6ZB57u5Z5cuBpVwq3luyamowBs2DvyWuBRWZZSaXQbytQ6orPSdrCIHduDyOVsglvY5fdI7L1/ZWq6vHn9i7xU4a0AANaBYACwA7Ny3SOXOzLI/E5WsYXO2D92VZPCyaVRc5JIzTGqoyPLj3DgOCQnLLyehorUI4RW6nasWPR4GxQWCFWIZwBBeK8iTm5q6ZWS3OgKCUg4Cg0SFIoy4gDeoLcLJeNGMI8q4NGTGi7z8O0piuGTl6vUezWfL4JbpXp2nCmhuQjljeANmd2e56afGDg15drb5ZirQsh1Ik9HoNerpmetPE3xkaER3kgt2rk/kz1knzywEAZd0uVOrWUPJlQfxGIflSmqeEjtdHh3ORWcdPl6RzRm5pDm9223cSlc5R2a49lmSiNcWn3hUaydBMVE/JU7C3cXrotfd04tuYfa5NaePJx+rS2j9SZ0olvUwxC5IYXWAues6wy/kK0s5SFNKv7cpfPH8/MuWjNC5oDnt1eR2+G5bwRzdTNPZE5O4BXYtBMbwNa4nrAkbgQSO0KqSZrNyiuDswUsrFkBjuG+WbbWLbbOHeFjZDuHdNf7N5wZ7jmEyxXLm3b6zcx38ElODid3T6iFnD3KpU7Vgzox4GxQWCWUgllgKDUI4KyIaOgIJSDAKC6ROaNYU+aQNYLuO/c1u9xV64uTwhfVXxqh3S4NMmYymjZTxec7zjvz2uPNNvEF2o8/X3Xzd0+F/MEXps4Pop2fYuB93Me5DZlXHfJirQqMdUSw6BU+vidI3/nNP4bu/KrVbyRjrX20SZ6gT55YCAMa6bZf67TDhA8+L7flSOs4R6LoK3kVfDMQ3FJRkd22ryiwS6PRTZuZn6zcj32296YURD28ocMav0IgGbpZByFj8EdiJWsn4SJHBTT0OuYtdxcACXuaBlsy71aM1Dgxurs1GO7wPG6YgO1gImEgAuyLrbs+8qfb7mb0G2NyRg0wYdsze4j4LRXL1Fp6GS4iP34pfetO7Is6u1ZKTpe92sJ4nOa4ZOLSWm1+qcvBK6qLXvxO70O6Mk9PYk/Kz+qGmHafVkWTniVvCQXP4xn43WMNTNc7nQ1HRdLZvGPa/l+3BYqPpIhflNG+M8W9dvz9hTEdTF8nHt6JbDeuSf6MlosUgnF4pGPvuvn3tOYWncpcCcqLanicWiu43o5FISWjUdxbs727FhOqLHqNZOGz3RTMRweWLzhdvrNzHeNoS8oOJ1ar4WbLkjlUbSwcKCQqkDoCC6Q7w6ifNI2ONus5xsAP3kERTk8IiyyNUHOTwka/h2Hx4dTXdYyuA1j6zvVHBoT6iqo/M8pZbZr7sLaK/RfuQVLUl8rpHG5+J+QWEXl5Z0L4qFariI4pUazHt4tI8QpcjCFZkzWobN0i39FcGti1N9nXd4MI+K1o3kJdTeKH8z0cnjzAEAYh01y3xGIerTD2yOOaR1ng9L0Je7JlAqKnUbcbdgScIdzO3fb7OGfJrOieLipoI35a7R5OS3rNAz7xY96efB57DUtxrie9YSHqipYnvS8jo1EI5UQyHoWl0rG8XC/Ze59l1pDkyteItl9NTZu3bknoHndQsLAyZWMmYbHWabtPdkQrSxJYMqpSpsU1ytyqVUJY8tO4+I3FcuUe14PcVWq2tTXkbOQishO9jcZHiMirowluSFJpFUR5CQuHqv649uY7itFNoSs01cvH5Ej/FWtYSMt93MeBUueSsdJ2cMRlEEubHBrvwnvBVXFM3jZOGzI6oonN5jiFRxaGY2RkGoKIyHkpjHJW2xQRaKTRcuAAbcnZzWqqyIy16ju2X7R3RmLD4XTSW8qR1jt1R/w2/vNNV1KpZfJwtXrrNdYq4fD4/dlSxzF3TyFzshsa31Rw7UrZY5PJ3dLpY0w7V9WJNl1GAb9p7VHCMbPfnki6usVHI1hApMrbOd94+9XzsHbuXnoYivioPqwSHx1R8UzpviOV1japL5m+p080BAGCdMsn+1SOEEftLikdVyeo6J/4m/mZ1Vv1jyGxZwWEb6mbnL5ItnRli3k53wuPVmGXDXbcjxF/ALQUkvJdcT3rKQzUVLE96XkdGohHKiGR1gzfrb8Afbl81rXyL6h+7gkscxHUidY52sO12/u+CcjtE4lke6zHoVrAcRML7HzHbeR3OUKWDSdfciwYlHrgOG0e0LC+GfeOj0vUduan+KIiRtksddvIi5WRlI5qqckKOApUkMKVJRikdS9uxx7No8CpKNFw0SPlC0at3H1dpPYtq4pnP1drink2nCMMbCwOcBrWz+zy7U9GKijy198rZYXBW9LazXyv1RsHx7UvdLJ1unVdm/kzsuu8ncCkvJ6Kx9sMeWN6ysUORjCshqious2xmMcEZMOsVrF7Gcl7xonQZFeund6tOB+KRv+kp3S+Tgdce0UbanDzoEAee+l9+ti0vKOJv8AlPzSOpfvHqOjr+wyiysyWUWN2QwmI08xY9r2mzmuDmngQbhaiRrf00TQslbse0HsO8eKymb1FcxPel5HRqIRyohkd4a61z+8lrAWvexF41Va7gNwzPaf0TTfg5UI+SPAVDdImsKrjbVdu2cxwU5ysEdrjJSRJVVLrM1m9o+SXlE61V2cESQsxrAUqSrCFWKMKVJRhqenc9zWMaXOcbNAFySpSzsZzkorLexs2hWAR4dAZ6lzfKWuSfNiB9FvF26/cn64KtZZ5fW6mern7Otbf5FKrTUTG7DZm4b+081DuyXr6c6+eSt4zjOuMilbJnY0lCW7K3PU2CwbGsdzyRc011Q2SwIEoJEXjNXXBXGWaj0DRdetdwEDR/3SfyroaT4WeY66/wC5Ffzwa6mzggQB556UWf7WqL8Iz/kXO1W0j1/RF3UP+epTqltmlZQe47qY4g2R6YOSXHQjELsfATs67Ow+cPGx7yqTRtU98DrE96VkdKohHKiGQsk+qztW1XInqvh/EinG5utmxSMToCg0SFYwb3Cq2axh3FgwapudQ78x27wqt5N4w7FsDFqPV642b+R4qkkNVWZ91kWVU0YGRlxsBdWRnJpcj+hwh8jwxo1nHwHMnhzV4xb2QtbdGEe6WyNAwqjpsNiM0pBktYutc39SMH9nemoxjWss4V9tusn2Q4/m7KNpRpNLWSdYlsTT1Iwch9p3F3NYWWOTOtpNHCiO3PlkTDO5uwkd+SyyO9ifKJCixIE7et+9i1gl5ENTJt9seEdrG3zGzeOH6LGyGN0bUW9yw+RiSs8DIQlWwVOBSXhubB0FRf1aqfxqA38Mbf8AUV0tKvcPIdbedRg01MnGAgDE+megLMQil3TQ2/midmPB7fFIa2PDPVf8dsT7qzOcQbZh7krU/eO1r49tTIpNnBHWGVZilY8bjnzado8FDWUWi8PJcMRcCLjYRcJOR1qiFcqIZI+sdd1uCYrWwjqHmWPQSAVzNIVZGqNm8K/UVaFRsZjEVhcWkEbQbhRk07clxh1ZYg62ThmPYQtOUJvMJYIluBHWOserfK209vBV7Bh6jbbklKPCb7LNZvPy4laRhkTu1Chzux9WYzDRs1WDWed3pHm87hyWuYwWwgqrNTLMuP5wUfE8SkqH68rrncPRaOAG5YSk5Pc61NEao4ihsAsxlIJK/cFaK8mV1uPdXIm0K2RZIeQVRG3NGS3sw0hBzCzaN1nG4kSjAHYTmolwaVfEbj0Lw2w3W9eeU+DtX8q6unWK0eJ6tLu1Ui+rY5oEAUzpVwM1NAXMF5YD5ZnEgDrt72+4LK6HfBof6bqXp71IwLFHAxAjYSFyqE1PDPb9TlGWnUo8NoiQE2cBIMAoNEixYbU60OqdrMu7d8u5L2rc6Gme2BJ6xQ4yMIuSUzwhHtcnkVaxVbN4wSDgKpqkHAUGiQcBVNEif0VqeuYj6Wbe0DMeA9i0rfgX1Vfu9/oWKrjMeZYT3dUfPsW+EuTluxvaJWcWx+XYxrm7tYtIy+yNyhz9DSvSpvMyuk3Nybk7ScysWx+McbBgFU0SCyPtkNqslkpbb27LkSAVhVIUaFVs1SFGhVbNUg7QoyaqIWSPeEJlZ1tboLCesFaXBWp4mjduiupazDIG7zrO/E8ldWpYijwmul3XyZd45gdi0FBRAELi2KCMIA89aa4cIpXGIfUufrtA/syb3ZyGeSTsqUZdyPRaTXO6hUye6eStALMZSDgKDRIeYfJqu5HI/BZWboZoTUh3UHL2LCHI/YsRGoC1MUg4Cg1SDAKDRIeUWHSy/wC7Y53MDq/i2ISbCU4Q+Jliw/Q522d4aPVbm7x2D2q6q9RaetXEEWCnjigbaFgHE7XHtO0q+0eBSXfa8zYyq6snaVRyN660uCLnnWbY1GJHVEgO0BVbN4xI+W3AeCjLIlJLZDZ0LeCspMWdcQpiCnuZHYjmqpySjmuAjBbvSOiobxR2Mur4LkOKpnFV9nL0LrU0/wDYRnkZta4X4LSEZcNGF1tK96Ei9aM4o6OCJo3MHz+K60PhR4HUvN0n8zSdHMSL7XVjAtrDkgCq6RYe54NkAZ7ieCONwRcHaChrJMZOLyuSoYhoo8G8ez1T8Cl50eh16OpLi1fVENNSPj89jm8yMvHYlpQkuTr06mmfwsI1w4rNpjkZR9Rw+UOsLjxWcYNG8rYtLLHlPQsObqiFg5vJPg0LT2bMXqoL1JOlpaBv+8qXyco4nAdl7E+5WVRlPXNcJL8WS9PieHxeZC9x4mFzj4uV1V8hWWtzzNfmOzpgy3Vgn5dVgH/krezl6GL1dK5khnPpQ87Kd/e9o910exmC6hp15GcuMzO2QtHbJf8AKj7NJk/1eheo1fVTu9GMfzEqPsj9Q/rlS4ixF8c59KMdgcVP2P5lX/yH0gJOoZDtkA7Gfqp+xR9TOX/IbHso/wA/I4MKO+Q9zQFZaSBhLrlz4R3/AOIHrv8AEfJXWmgZPrOofoHGDs36x/mKstPD0Mn1TUvyGbg0fqk9pJVvZQ9DN9Q1D+8KtweP/hhT7OPoZvWXv7zF48Ibujb+EKeyPoUeotf3n+Y7iwbgwfhCnC9Cjsm+ZP8AMkabAXHd7FJTJOYfowb5hAF0wbCfJhAE+0IAJJECgCPqMJa7cgCMqNHGncgCNm0VHBAEbUaGMO1jT2tBUYRdWTXDf5jJ+hbRsjb+EfJHavQn2s/+z/Nif8KEbG27ApKNt8icmjLuCCBE6Nu4IAH8Nu4IAH8Nu4IAH8Nu4IAH8Nu4IAH8Nu4IA6NG3cEALM0YdwQAqzRY8EAOGaKHggB1FonyQA7i0UHBAD6HRho3IAfw6PtG5AD6HCmjcgB3HTAbkALAIA6gAIACAOWQBwtQBwxhABDCOCACmBvBABHUzeCACfRW8EAc+it4IAH0VvBAA+it4IAH0VvBAA+it4IA6KVvBAB207eCADiBvBABhCOCADiMIA6GhAHbIA6gAIACAAgAIA//2Q==" alt="" /></p>
+
+<p>Update the sources</p>
+
+<p><code>sudo apt-get update</code></p>
+
+<p>Next, let us install the pre-requisites</p>
+
+<p><code>sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev</code></p>
+
+<p>Now we come to the Rbenv instructions, copy paste the following instructions on your shell.</p>
+
+<p><code>git clone https://github.com/sstephenson/rbenv.git ~/.rbenv</code></p>
+
+<p><code>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc</code></p>
+
+<p><code>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc</code></p>
+
+<p>Note: Zsh users please use <code>~/.zshrc</code> in place of <code>~/.bashrc</code>.``</p>
+
+<p><code>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build</code></p>
+
+<p><code>echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &gt;&gt; ~/.bashrc</code></p>
+
+<p><code>exec $SHELL</code></p>
+
+<p><code>git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash</code></p>
+
+<p><code>rbenv install 2.2.2</code></p>
+
+<p><code>rbenv global 2.2.2</code></p>
+
+<p><code>echo "gem: --no-ri --no-rdoc" &gt; ~/.gemrc</code></p>
+
+<p><code>gem install bundler</code></p>
+
+<p><code>gem install rails</code></p>
+
+<p><code>gem install therubyracer</code></p>
+
+<p><code>rbenv rehash</code></p>
+
+<p>Check if its installed correctly</p>
+
+<p><code>rails -v</code></p>
+
+<p>Thanks for reading! Hope this helped!</p>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#Tech-ref">
+    		Tech <span>3</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#ruby-ref">ruby <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  
+    <hr>
+    <ul class="pagination">
+    
+      <li class="prev"><a href="/2015/07/02/hello-world-2" title="Hello World">&laquo; Previous</a></li>
+    
+      <li><a href="/archive.html">Archive</a></li>
+    
+      <li class="next"><a href="/2016/02/17/fun-with-sudo" title="Fun with sudo">Next &raquo;</a></li>
+    
+    </ul>
+    <hr>
+    
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p>&copy; 2017 Prashant Anantharaman
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+        </p>
+      </div>
+    </div>
+
+    
+
+
+
+
+
+    <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/assets/themes/bootstrap-3/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
